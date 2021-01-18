@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/registros.css">
+</head>
+
+<body>
+    <div class="headerlogo">
+
+        <a href="/"><img class="logo1"
+                src="https://i.pinimg.com/originals/f5/40/43/f54043db7440f6bfdf30f3965e53bf09.png" alt="Logo"></a>
+    </div>
+    <header>
+        <ul class="header">
+            <li><a href="/src/administrador.html">Inicio</a></li>
+            <li style="float: right;" class="inicio"><a href="/">Salir</a></li>
+        </ul>
+    </header>
+
+
+    <div class="div_registro_s">
+        <div>
+            <h2>Estudiantes con posible registro</h2>
+            <div>
+                <ol>
+                    <form id="registro_s">
+                        <select class="registro_s_select" name="" id="select">
+                            <option value="">Seleccione un registro</option>
+                            <option value="Juan Pereira - Dibujo - Grupo A">Juan Pereira - Dibujo - Grupo A</option>
+                            <option value="Uan Patiño - Danza - Grupo B">Uan Patiño - Danza - Grupo B</option>
+                            <option value="Jesus Thorson - Guitarra - Grupo C">Jesus Thorson - Guitarra - Grupo C</option>
+                            <option value="Cory Taylor- Canto - Grupo B">Cory Taylor- Canto - Grupo B</option>
+
+                        </select>
+                        <button type="submit">Confirmar</button>
+                    </form>
+                </ol>
+            </div>
+        </div>
+
+        <div class="div_estado">
+            <h3>Administrar registro</h3>
+            <ol>
+                <label id="registro__li">Registro</label><br>
+                <form name="name" id="form_estado">
+                    <select class="estado_select registro_s_select" type="select" id="estado">
+                        <option value="">Seleccione uno</option>
+                        <option id="Aprobado">Aprobado</option>
+                        <option id="Rechazado">Rechazado</option>
+
+                    </select>
+                    <button>Guardar estado</button>
+                </form>
+                <h4>El registro del estudiante ha sido</h4>
+                <p id="estado1">En espera</p>
+            </ol>
+        </div>
+    </div>
+
+
+
+    <footer>
+        <a href="/src/estudiante.html">Autor</a>
+    </footer>
+
+    <script>
+        document.getElementById('registro_s').addEventListener('submit', Obtenerregistro_);
+
+        function Obtenerregistro_(a) {
+            let registro_ = document.getElementById('select').value;
+            document.getElementById("registro__li").innerHTML = registro_;
+            a.preventDefault()
+        }
+
+        document.getElementById('form_estado').addEventListener('submit', Estado);
+
+        function Estado(b) {
+            let estado = document.getElementById('estado').value;
+            document.getElementById("estado1").innerHTML = estado;
+            b.preventDefault()
+            alert("El registro del estudiante ha sido: " + estado)
+        }
+    </script>
+</body>
+
+</html>

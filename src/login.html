@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/login.css">
+</head>
+
+<body>
+    <div class="headerlogo">
+
+        <a href="/"><img class="logo1"
+                src="https://i.pinimg.com/originals/f5/40/43/f54043db7440f6bfdf30f3965e53bf09.png" alt="Logo"></a>
+    </div>
+    <header>
+        <ul class="header">
+            <li><a href="/">Inicio</a></li>
+            <li><a href="/src/acercade.html">Sobre Nosotros</a></li>
+            <li><a href="/src/actividades.html">Conozca nuestras actividades</a></li>
+            <li><a href="/src/contacto.html">Contáctenos</a></li>
+            <li style="float: right;" class="inicio"><a href="/src/register.html">Registro</a></li>
+        </ul>
+    </header>
+
+
+    <h1>Inicio de sesión</h1>
+
+    <div>
+        <div class="formdiv">
+            <form class="form" id="form" action="">
+                <label>Correo</label><br>
+                <input  id="email" type="email" placeholder="example@some.com"><br>
+                <label>Contraseña</label><br>
+                <input  id="contra" type="password" placeholder="***"><br>
+                <button type="submit">Ingresar</button>
+                <p>¿No tienes cuenta?</p>
+                <a href="/src/register.html">Registrate ahora</a>
+            </form>
+            <div id='errormostrado'></div>
+        </div>
+    </div>
+
+
+    <footer>
+        <a href="/src/estudiante.html">Autor</a>
+    </footer>
+
+    <script>
+        let email = document.getElementById('email');
+        let contra = document.getElementById('contra');
+        let error = document.getElementById('errormostrado');
+        error.style.color = 'red'
+        error.style.textAlign='center'
+
+
+
+        let form = document.getElementById('form');
+        form.addEventListener('submit', function (accion) {
+            accion.preventDefault();
+            let ErrorMensaje = [];
+            if (email.value === null || email.value === '') {
+                ErrorMensaje.push('Ingrese el correo por favor')
+            }
+            if (contra.value === null || contra.value === '') {
+                ErrorMensaje.push('Ingrese su contraseña')
+
+            }
+            if (contra.value != null && contra.value != '' && email.value != '' && email.value != null) {
+                Admin()
+            }
+
+            error.innerHTML = ErrorMensaje.join('<br>')
+
+
+        })
+
+        function Admin(a) {
+            let email = (document.getElementById('email').value)
+            if (email == "administrador@some.com") {
+                location.href = '/src/administrador.html'
+            } else {
+                location.href = '/src/home.html'
+            }
+            a.preventDefault()
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,25 @@
+.div_registro_s{
+    text-align: center;
+    margin-top: 40px;
+    line-height: 1.9;
+}
+
+.div_estado{
+    margin-top: 50px;
+}
+
+select{
+    padding: 5px;
+
+}
+
+
+button{
+    border-radius: 10px;
+    padding: 5px;
+}
+
+footer{
+    bottom: 0;
+    position: fixed;
+}

@@ -1,0 +1,34 @@
+
+h1{
+    text-align: center;
+}
+
+
+.consultas{
+    text-align: center;
+}
+
+.consultas input{
+    padding: 10px;
+    border-radius: 10px;
+}
+
+table{
+    padding-top: 30px;
+    margin: auto;
+    line-height: 1.9;
+}
+
+th, td{
+    padding-left: 50px;
+}
+
+th{
+    font-size: x-large;
+}
+
+footer{
+    bottom: 0;
+    position: fixed;
+}
+

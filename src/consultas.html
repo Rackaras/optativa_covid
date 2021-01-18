@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/consultas.css">
+</head>
+<body>
+    <div class="headerlogo">
+        
+        <a href="/"><img class="logo1" src="https://i.pinimg.com/originals/f5/40/43/f54043db7440f6bfdf30f3965e53bf09.png" alt="Logo"></a>
+    </div>
+    <header>
+        <ul class="header">
+            <li><a href="/src/home.html">Inicio</a></li>
+            <li style="float: right;" class="inicio"><a href="/">Salir</a></li>
+        </ul>
+    </header>
+
+
+    <h1>Actividades registradas</h1>
+
+
+    <div class="consultas">
+
+        <div class="consultas__div">
+
+            <div>
+
+                <input class="buscador" data-table="tabla" type="text"
+                    placeholder="Buscar">
+                    <table class="tabla ">
+                        <thead>
+                            <tr>
+                                <th>Nombre del menor</th>
+                                <th>Actividad</th>
+                                <th>Periodo</th>
+                                <th>Horario</th>
+                            </tr>
+                        </thead>
+                        <tr>
+                            <td>Juan Alberto Jimenez Peña</td>
+                            <td>Ajedrez</td>
+                            <td>2021 (1)</td>
+                            <td>8am-10am</td>
+                        </tr>
+                        <tr>
+                            <td>Vivian Valeria Jimenez Peña</td>
+                            <td>Danza</td>
+                            <td>2021 (1)</td>
+                            <td>10am-12pm</td>
+                        </tr>
+                        <tr>
+                            <td>Vivian Valeria Jimenez Peña</td>
+                            <td>Dibujo</td>
+                            <td>2021 (1)</td>
+                            <td>3pm-5pm</td>
+                        </tr>
+                    </table>
+    
+                
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <a href="/src/estudiante.html">Autor</a>
+    </footer>
+
+    <script>
+        (function (document) {
+        'use strict';
+
+        var LightTableFilter = (function (Arr) {
+
+            var _input;
+
+            function _onInputEvent(e) {
+                _input = e.target;
+                var tables = document.getElementsByClassName(_input.getAttribute('data-table'));
+                Arr.forEach.call(tables, function (table) {
+                    Arr.forEach.call(table.tBodies, function (tbody) {
+                        Arr.forEach.call(tbody.rows, _filter);
+                    });
+                });
+            }
+
+            function _filter(row) {
+                var text = row.textContent.toLowerCase(), val = _input.value.toLowerCase();
+                row.style.display = text.indexOf(val) === -1 ? 'none' : 'table-row';
+            }
+
+            return {
+                init: function () {
+                    var inputs = document.getElementsByClassName('buscador');
+                    Arr.forEach.call(inputs, function (input) {
+                        input.oninput = _onInputEvent;
+                    });
+                }
+            };
+        })(Array.prototype);
+
+        document.addEventListener('readystatechange', function () {
+            if (document.readyState === 'complete') {
+                LightTableFilter.init();
+            }
+        });
+
+    })(document);
+    </script>
+</body>
+</html>

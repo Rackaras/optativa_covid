@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/login.css">
+
+</head>
+<body>
+    <div class="headerlogo">
+        
+        <a href="/"><img class="logo1" src="https://i.pinimg.com/originals/f5/40/43/f54043db7440f6bfdf30f3965e53bf09.png" alt="Logo"></a>
+    </div>
+    <header>
+        <ul class="header">
+            <li><a href="/">Inicio</a></li>
+            <li><a href="/src/acercade.html">Sobre Nosotros</a></li>
+            <li><a href="/src/actividades.html">Conozca nuestras actividades</a></li>
+            <li><a href="/src/contacto.html">Contáctenos</a></li>
+            <li style="float: right;" class="inicio"><a href="/src/login.html">Inicia sesión</a></li>
+        </ul>
+    </header>
+
+
+    <h1>Registro</h1>
+
+    <div>
+        <div class="formdiv">
+            <form class="form" id="form" action="">
+                <label>Nombres</label><br>
+                <input required type="text" placeholder="Raul"><br>
+                <label>Apellidos</label><br>
+                <input required type="text" placeholder="Cedeño"><br>
+                <label>Correo</label><br>
+                <input required  id="email" type="email" placeholder="example@some.com"><br>
+                <label>Contraseña</label><br>
+                <input required  id="contra" type="password" placeholder="******"><br>
+                <label>Repita su contraseña</label><br>
+                <input required  id="contra" type="password" placeholder="******"><br>
+                <button type="submit">Ingresar</button>
+                <p>¿Ya tienes cuenta?</p>
+                <a href="/src/login.html">Inicia sesión</a>
+            </form>
+            <div id='errormostrado'></div>
+        </div>
+    </div>
+
+    <footer>
+        <a href="/src/estudiante.html">Autor</a>
+    </footer>
+</body>
+</html>

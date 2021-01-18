@@ -1,0 +1,12 @@
+.datosextra {
+    text-align: center;
+}
+
+.datosextra img{
+    border-radius: 10px;
+}
+
+.datosextra a{
+    text-decoration: none;
+    color: green;
+}

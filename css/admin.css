@@ -1,0 +1,14 @@
+.admin {
+    text-align: center;
+}
+
+button {
+    border-radius: 20px;
+    padding: 10px;
+    cursor: pointer;
+}
+
+footer {
+    bottom: 0;
+    position: fixed;
+}

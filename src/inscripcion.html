@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/inscripcion.css">
+</head>
+<body>
+    <div class="headerlogo">
+        
+        <a href="/"><img class="logo1" src="https://i.pinimg.com/originals/f5/40/43/f54043db7440f6bfdf30f3965e53bf09.png" alt="Logo"></a>
+    </div>
+    <header>
+        <ul class="header">
+            <li><a href="/src/home.html">Inicio</a></li>
+            <li><a href="/src/consultas.html">Actividades registradas</a></li>
+            <li style="float: right;" class="inicio"><a href="/">Salir</a></li>
+        </ul>
+    </header>
+
+    <div>
+        <h1>Inscripción para Ajedrez</h1>
+        <h3>En el siguiente formulario registre los datos de su hijo</h3>
+        <form class="form" id="form" action="">
+            <Label>Nombres</Label><br>
+            <input required type="text" placeholder="Nombre"><br>
+            <Label>Apellidos</Label><br>
+            <input required type="text" placeholder="Apellidos"><br>
+            <Label>Edad</Label><br>
+            <input required type="number" min="3" max="17" placeholder="Edad"><br>
+            <button type="submit">Enviar inscripción</button>
+        </form>
+    </div>
+
+
+    <footer>
+        <a href="/src/estudiante.html">Autor</a>
+    </footer>
+
+    <script>
+        
+        let form = document.getElementById('form');
+        form.addEventListener('submit', function (accion) {
+            accion.preventDefault();
+            alert("Formulario enviado, la respuesta le llegará en breve")
+            location.href = '/src/home.html'
+        })
+    </script>
+</body>
